@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Katalog</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+      div.gallery {
+          margin: 5px;
+          border: 1px solid #ccc;
+          float: left;
+          width: 180px;
+      }
+
+      div.gallery:hover {
+          border: 1px solid #777;
+      }
+      .hid{
+        display: none;
+      }
+      div.gallery img {
+          width: 100%;
+          height: auto;
+      }
+
+      div.desc {
+          padding: 15px;
+          text-align: center;
+      }
+      .button-success,
+        .button-error,
+        .button-warning,
+        .button-secondary {
+            color: white;
+            border-radius: 4px;
+            text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+        }
+
+        .button-success {
+            background: rgb(28, 184, 65); /* this is a green */
+        }
+
+        .button-error {
+            background: rgb(202, 60, 60); /* this is a maroon */
+        }
+
+        .button-warning {
+            background: rgb(223, 117, 20); /* this is an orange */
+        }
+
+        .button-secondary {
+            background: rgb(66, 184, 221); /* this is a light blue */
+        }
+    </style>
+    <script>
+      function change(el){
+        if (el == 'bolgarki'){
+          $('.bolgarki').removeClass('hid');
+          $('.dreli').addClass('hid');
+          $('.kompresori').addClass('hid');
+          $('.shlangi').addClass('hid');
+          $('.shurupovert').addClass('hid');
+          $('.vetrodui').addClass('hid');
+        }else if (el == 'dreli'){
+          $('.bolgarki').addClass('hid');
+          $('.dreli').removeClass('hid');
+          $('.kompresori').addClass('hid');
+          $('.shlangi').addClass('hid');
+          $('.shurupovert').addClass('hid');
+          $('.vetrodui').addClass('hid');
+      }else if (el == 'kompresori'){
+        $('.bolgarki').addClass('hid');
+        $('.dreli').addClass('hid');
+        $('.kompresori').removeClass('hid');
+        $('.shlangi').addClass('hid');
+        $('.shurupovert').addClass('hid');
+        $('.vetrodui').addClass('hid');
+      }else if(el == 'shlangi'){
+        $('.bolgarki').addClass('hid');
+        $('.dreli').addClass('hid');
+        $('.kompresori').addClass('hid');
+        $('.shlangi').removeClass('hid');
+        $('.shurupovert').addClass('hid');
+        $('.vetrodui').addClass('hid');
+      }  else if(el == 'shurupovert'){
+        $('.bolgarki').addClass('hid');
+        $('.dreli').addClass('hid');
+        $('.kompresori').addClass('hid');
+        $('.shlangi').addClass('hid');
+        $('.shurupovert').removeClass('hid');
+        $('.vetrodui').addClass('hid');
+        }else if(el == 'vetrodui'){
+            $('.bolgarki').addClass('hid');
+            $('.dreli').addClass('hid');
+            $('.kompresori').addClass('hid');
+            $('.shlangi').addClass('hid');
+            $('.shurupovert').addClass('hid');
+            $('.vetrodui').removeClass('hid');
+    }
+  }
+    </script
+  </head>
+  <body bgcolor="#808080">
+    <center><p><h1 style="color:#2F4F4F">Электро инструменты</p></h1></center>
+
+
+<ol>
+      <li > <button class="button-secondary" onclick="change('bolgarki')"><style="color:#000000">Болгарки</button></li>
+      <li > <button class="button-success" onclick="change('dreli')"><style="color:#000000">Дрели</button></li>
+      <li> <button class="button-error" onclick="change('kompresori')"><style="color:#000000">Компрессоры</button></li>
+      <li> <button class="button-warning" onclick="change('shlangi')"><style="color:#000000">Шланги</button></li>
+      <li><button class="button-secondary" onclick="change('shurupovert')"><style="color:#000000">Шуруповерты</button></li>
+      <li><button onclick="change('vetrodui')"><style="color:#000000">Ветродуи</button></li>
+    </ol>
+
+
+    <div class="gallery bolgarki hid">
+          <a target="_blank" href="img_5terre.jpg">
+            <img src="ruchnoj-elektroinstrument.jpg" alt="5Terre" width="1200" height="1000">
+            <p>цена и характеристики</p>
+          </a>
+          <div class="desc">Марка,модель</div>
+        </div>
+    </div>
+
+    <div class="gallery dreli hid">
+          <a target="_blank" href="img_5terre.jpg">
+            <img src="1485756306_522553109584925.jpg" alt="5Terre" width="1200" height="1000">
+      <p>цена и характеристики</p>
+          </a>
+          <div class="desc">Марка,модель</div>
+    </div>
+
+    <div class="gallery kompresori hid">
+          <a target="_blank" href="img_5terre.jpg">
+            <img src="456.jpg" alt="5Terre" width="1200" height="1000">
+      <p>цена и характеристики</p>
+          </a>
+          <div class="desc">Марка,модель</div>
+        </div>
+
+        <div class="gallery shlangi hid">
+              <a target="_blank" href="img_5terre.jpg">
+                <img src="555.jpg" alt="5Terre" width="1200" height="1000">
+      <p>цена и характеристики</p>
+              </a>
+              <div class="desc">Марка,модель</div>
+            </div>
+
+          <div class="gallery shurupovert hid">
+                  <a target="_blank" href="img_5terre.jpg">
+                    <img src="798.jpg" alt="5Terre" width="1200" height="1000">
+      <p>цена и характеристики</p>
+                  </a>
+                  <div class="desc">Марка,модель</div>
+                </div>
+
+        <div class="gallery vetrodui hid">
+              <a target="_blank" href="img_5terre.jpg">
+                <img src="987.jpg" alt="5Terre" width="1200" height="1000">
+      <p>цена и характеристики</p>
+                  </a>
+                  <div class="desc">Марка,модель</div>
+                </div>
+
+  </body>
+</html>
